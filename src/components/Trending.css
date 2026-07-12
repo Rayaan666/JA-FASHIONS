@@ -1,0 +1,130 @@
+.trending-editorial {
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.trending-editorial.section-padding {
+  padding-bottom: 72px;
+}
+
+.trending-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.section-label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+.trending-title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+}
+
+.trending-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-row {
+  display: flex;
+  align-items: center;
+  gap: 6vw;
+  padding: 40px 0;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.row-num {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--color-border);
+  width: 80px;
+}
+
+.row-img-wrap {
+  flex: 1;
+  max-width: 400px;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.row-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+}
+
+.trending-row:hover .row-img-wrap img {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(233, 30, 143, 0.2);
+}
+
+.row-content {
+  flex: 1;
+}
+
+.row-content h3 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.row-content p {
+  color: var(--color-text-muted);
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+.row-content a {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-pink);
+  transition: var(--transition-fast);
+}
+
+.row-content a:hover {
+  opacity: 0.7;
+}
+
+.row-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+@media (max-width: 992px) {
+  .trending-row, .row-reverse {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  
+  .row-num {
+    display: none;
+  }
+  
+  .row-img-wrap {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trending-editorial.section-padding {
+    padding-bottom: 48px;
+  }
+}

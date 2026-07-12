@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  /* Dark Editorial Palette */
+  --color-bg: #080808; /* Deep luxury black */
+  --color-black: #F5F5F5; /* Primary text (White) */
+  --color-white: #000000; /* Inverted */
+  --color-border: #222222; /* Subtle dark grey for thin lines */
+  --color-text-muted: #888888;
+  
+  /* Brand Accents */
+  --color-pink: #E91E8F;
+  --color-blue: #E91E8F; /* Removed blue, mapped to pink */
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-ui: 'Poppins', sans-serif;
+
+  --transition-slow: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--color-bg);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-black);
+  background-color: var(--color-bg);
+  line-height: 1.7;
+  font-weight: 300;
+  overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Elegant Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--color-pink);
+  line-height: 1.1;
+}
+
+.heading-italic {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-pink);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-ui);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1600px; /* Wider for editorial feel */
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+
+.section-padding {
+  padding: 150px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 80px 0;
+  }
+}
+
+/* Subtle interactions */
+.link-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.link-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-pink);
+  transition: var(--transition-smooth);
+}
+
+.link-hover:hover::after {
+  width: 100%;
+}
+
+.link-hover-brand:hover::after {
+  background-color: var(--color-pink);
+}
+
+.link-hover-brand:hover {
+  color: var(--color-pink);
+}
+
+/* Minimalist Button */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border: 1px solid rgba(233, 30, 143, 0.4);
+  color: var(--color-black);
+  border-radius: 0;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-pink);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+}
+
+.btn-outline:hover {
+  color: #ffffff;
+  border-color: var(--color-pink);
+}
+
+.btn-outline:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn-outline.brand-hover:hover::before {
+  background: var(--color-pink);
+}
+.btn-outline.brand-hover:hover {
+  border-color: var(--color-pink);
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-pink);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c4177a;
+}
