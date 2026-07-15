@@ -14,15 +14,9 @@ const Footer = () => {
 
         <div className="footer-grid">
           <div className="footer-col">
-            <span className="col-title">Visit Us</span>
-            <p>Dubai Design District, UAE</p>
-            <p>Open 10am - 8pm</p>
-          </div>
-
-          <div className="footer-col">
             <span className="col-title">Inquiries</span>
             <a href="mailto:jafashions2014@gmail.com" className="link-hover">jafashions2014@gmail.com</a>
-            <p>+971528394207</p>
+            <a href="tel:+971528394207" className="link-hover">+971 52 839 4207</a>
           </div>
 
           <div className="footer-col">
@@ -76,8 +70,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} JA Fashions UAE.</p>
           <div className="footer-legal">
-            <a href="#" className="link-hover">Privacy</a>
-            <a href="#" className="link-hover">Terms</a>
+            <a href="/terms.html#terms" target="_blank" rel="noopener noreferrer" className="link-hover">Terms</a>
+            <a href="/terms.html#returns" target="_blank" rel="noopener noreferrer" className="link-hover">Returns</a>
+            <a href="/terms.html#shipping" target="_blank" rel="noopener noreferrer" className="link-hover">Shipping</a>
           </div>
         </div>
       </div>

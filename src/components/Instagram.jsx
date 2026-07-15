@@ -60,7 +60,7 @@ const InstagramFeed = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Tag <a href="https://instagram.com/jafashions" target="_blank" rel="noreferrer" className="insta-handle">@jafashions</a> to be featured in our curated style gallery.
+            Tag <a href="https://www.instagram.com/jafashionsuae/" target="_blank" rel="noreferrer" className="insta-handle">@jafashionsuae</a> to be featured in our curated style gallery.
           </motion.p>
         </div>
 
@@ -83,7 +83,7 @@ const InstagramFeed = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <a 
-            href="https://instagram.com/jafashions" 
+            href="https://www.instagram.com/jafashionsuae/" 
             target="_blank" 
             rel="noreferrer" 
             className="btn-outline brand-hover"

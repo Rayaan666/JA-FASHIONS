@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, MessageCircle, Instagram, Send } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Instagram, Send } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -42,41 +42,34 @@ const Contact = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="contact-subtitle">Visit Our Boutique</h3>
+            <h3 className="contact-subtitle">Connect With Us</h3>
             <p className="contact-desc">
-              Experience our curated luxury collections in person or reach out to our dedicated concierge for personalized styling and orders.
+              Reach out to our dedicated concierge for personalized styling, product questions, and order support.
             </p>
 
             <ul className="info-list">
               <li>
-                <div className="info-icon"><MapPin size={20} strokeWidth={1.5} /></div>
-                <div>
-                  <h4>Location</h4>
-                  <p>Fashion Avenue, Downtown Dubai<br/>United Arab Emirates</p>
-                </div>
-              </li>
-              <li>
                 <div className="info-icon"><Phone size={20} strokeWidth={1.5} /></div>
                 <div>
                   <h4>Phone</h4>
-                  <p>+971528394207</p>
+                  <a href="tel:+971528394207">+971 52 839 4207</a>
                 </div>
               </li>
               <li>
                 <div className="info-icon"><Mail size={20} strokeWidth={1.5} /></div>
                 <div>
                   <h4>Email</h4>
-                  <p>jafashions2014@gmail.com</p>
+                  <a href="mailto:jafashions2014@gmail.com">jafashions2014@gmail.com</a>
                 </div>
               </li>
             </ul>
 
             <div className="contact-actions">
-              <a href="https://wa.me/971528394207" target="_blank" rel="noreferrer" className="btn-whatsapp">
+              <a href="https://wa.link/o1min2" target="_blank" rel="noreferrer" className="btn-whatsapp">
                 <MessageCircle size={20} />
                 WhatsApp Order
               </a>
-              <a href="https://instagram.com/jafashions" target="_blank" rel="noreferrer" className="btn-instagram">
+              <a href="https://www.instagram.com/jafashionsuae/" target="_blank" rel="noreferrer" className="btn-instagram">
                 <Instagram size={20} />
                 Follow Us
               </a>

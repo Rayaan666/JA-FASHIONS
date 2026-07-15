@@ -102,7 +102,7 @@ const FeaturedCollections = () => {
             </motion.p>
 
             <motion.a
-              href="#all-archives"
+              href="#hot-offers"
               className="btn-outline brand-hover collections-view-all"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -87,8 +87,23 @@
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.offer-img-wrapper--portrait {
+  aspect-ratio: 739 / 1600;
+  background: #0d0d0d;
+}
+
+.offer-img--portrait {
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .offer-card:hover .offer-img {
   transform: scale(1.05);
+}
+
+.offer-card:hover .offer-img--portrait {
+  transform: scale(1.015);
 }
 
 .offer-overlay {

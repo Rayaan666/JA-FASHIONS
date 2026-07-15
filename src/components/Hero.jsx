@@ -106,7 +106,7 @@ const Hero = () => {
               "name": "United Arab Emirates"
             },
             "sameAs": [
-              "https://www.instagram.com/jafashions",
+              "https://www.instagram.com/jafashionsuae/",
               "https://www.facebook.com/jafashions"
             ],
             "makesOffer": {

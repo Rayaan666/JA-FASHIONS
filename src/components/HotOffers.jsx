@@ -4,20 +4,22 @@ import { ExternalLink, MessageCircle } from 'lucide-react';
 import './HotOffers.css';
 
 const HotOffers = () => {
-  const [activeTab, setActiveTab] = useState('Chicken Curry Cotton Short Tops');
+  const [activeTab, setActiveTab] = useState('Chikankari Cotton Short Tops');
 
   const tabs = [
-    'Chicken Curry Cotton Short Tops',
-    'Heavy Embroidery 3 Piece Set'
+    'Chikankari Cotton Short Tops',
+    'Heavy Embroidery 3 Piece Set',
+    'Short Tops'
   ];
 
   const driveLinks = {
-    'Chicken Curry Cotton Short Tops': 'https://drive.google.com/drive/folders/1VjTkh2cPiQiv1aLzDhk1C5xRI_dfrrGb',
-    'Heavy Embroidery 3 Piece Set': 'https://drive.google.com/drive/folders/1VS-gOJJP4owgeiOuKlaR3UWr2sWnOLZl'
+    'Chikankari Cotton Short Tops': 'https://drive.google.com/drive/folders/1VjTkh2cPiQiv1aLzDhk1C5xRI_dfrrGb',
+    'Heavy Embroidery 3 Piece Set': 'https://drive.google.com/drive/folders/1VS-gOJJP4owgeiOuKlaR3UWr2sWnOLZl',
+    'Short Tops': 'https://drive.google.com/file/d/1BQ8a-Ed9d3nUUYash7V386HPvGrI2mAB/view'
   };
 
   const tabData = {
-    'Chicken Curry Cotton Short Tops': [
+    'Chikankari Cotton Short Tops': [
       { id: 101, src: '/hot offers/1.jpg', title: 'Cotton Short Top 1' },
       { id: 102, src: '/hot offers/2.jpg', title: 'Cotton Short Top 2' },
       { id: 103, src: '/hot offers/3.jpg', title: 'Cotton Short Top 3' },
@@ -26,6 +28,11 @@ const HotOffers = () => {
       { id: 201, src: '/hot offers1/1.jpg', title: 'Embroidery Set 1' },
       { id: 202, src: '/hot offers1/2.jpg', title: 'Embroidery Set 2' },
       { id: 203, src: '/hot offers1/3.jpg', title: 'Embroidery Set 3' },
+    ],
+    'Short Tops': [
+      { id: 301, src: '/hot offers2/1.jpeg', title: 'Embroidered Short Top 1' },
+      { id: 302, src: '/hot offers2/2.jpeg', title: 'Embroidered Short Top 2' },
+      { id: 303, src: '/hot offers2/3.jpeg', title: 'Embroidered Short Top 3' },
     ]
   };
 
@@ -71,8 +78,12 @@ const HotOffers = () => {
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="offer-card"
               >
-                <div className="offer-img-wrapper">
-                  <img src={item.src} alt={item.title} className="offer-img" />
+                <div className={`offer-img-wrapper ${activeTab === 'Short Tops' ? 'offer-img-wrapper--portrait' : ''}`}>
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className={`offer-img ${activeTab === 'Short Tops' ? 'offer-img--portrait' : ''}`}
+                  />
                   <div className="offer-overlay">
                     <h3 className="offer-title">{item.title}</h3>
                   </div>
