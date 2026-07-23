@@ -9,13 +9,25 @@ const HotOffers = () => {
   const tabs = [
     'Chikankari Cotton Short Tops',
     'Heavy Embroidery 3 Piece Set',
-    'Short Tops'
+    'Short Tops',
+    'Fancy Gown',
+    'Offer Kurtis',
+    'Short Top',
+    'Embroidery Alyacut Kurtis',
+    'Cord Set',
+    'Chickankari Cotton Rayon'
   ];
 
   const driveLinks = {
     'Chikankari Cotton Short Tops': 'https://drive.google.com/drive/folders/1VjTkh2cPiQiv1aLzDhk1C5xRI_dfrrGb',
     'Heavy Embroidery 3 Piece Set': 'https://drive.google.com/drive/folders/1VS-gOJJP4owgeiOuKlaR3UWr2sWnOLZl',
-    'Short Tops': 'https://drive.google.com/file/d/1BQ8a-Ed9d3nUUYash7V386HPvGrI2mAB/view'
+    'Short Tops': 'https://drive.google.com/file/d/1BQ8a-Ed9d3nUUYash7V386HPvGrI2mAB/view',
+    'Fancy Gown': 'https://drive.google.com/drive/folders/1vB06g95tGxB3-9l8pJXDucpZLxi567Rp',
+    'Offer Kurtis': 'https://drive.google.com/drive/folders/11v9z-Fjyj2FBHFDuwp9m80tjIBmFGosL',
+    'Short Top': 'https://drive.google.com/drive/folders/1ZTjfPWBAXZTgkHkamK0reFkd3o9caJ5s',
+    'Embroidery Alyacut Kurtis': 'https://drive.google.com/drive/folders/1-7ku4EOXYpO3sI4j2IrSIEf85eY2-h1m',
+    'Cord Set': 'https://drive.google.com/drive/folders/1XixA5ykw61oUGvT6eBj98xcqwRTRv4iA',
+    'Chickankari Cotton Rayon': 'https://drive.google.com/drive/folders/1418vW31r3cYlpWh_36ZhsfR2ORefM7dJ'
   };
 
   const tabData = {
@@ -33,6 +45,36 @@ const HotOffers = () => {
       { id: 301, src: '/hot offers2/1.jpeg', title: 'Embroidered Short Top 1' },
       { id: 302, src: '/hot offers2/2.jpeg', title: 'Embroidered Short Top 2' },
       { id: 303, src: '/hot offers2/3.jpeg', title: 'Embroidered Short Top 3' },
+    ],
+    'Fancy Gown': [
+      { id: 401, src: '/hot offers3/1.jpg', title: 'Fancy Gown 1' },
+      { id: 402, src: '/hot offers3/2.jpg', title: 'Fancy Gown 2' },
+      { id: 403, src: '/hot offers3/3.jpg', title: 'Fancy Gown 3' },
+    ],
+    'Offer Kurtis': [
+      { id: 501, src: '/hot offers4/1.jpg', title: 'Offer Kurti 1' },
+      { id: 502, src: '/hot offers4/2.jpg', title: 'Offer Kurti 2' },
+      { id: 503, src: '/hot offers4/3.jpg', title: 'Offer Kurti 3' },
+    ],
+    'Short Top': [
+      { id: 601, src: '/hot offers5/1.jpg', title: 'Short Top 1' },
+      { id: 602, src: '/hot offers5/2.jpg', title: 'Short Top 2' },
+      { id: 603, src: '/hot offers5/3.jpg', title: 'Short Top 3' },
+    ],
+    'Embroidery Alyacut Kurtis': [
+      { id: 701, src: '/hot offers6/1.jpg', title: 'Embroidery Alyacut Kurti 1' },
+      { id: 702, src: '/hot offers6/2.jpg', title: 'Embroidery Alyacut Kurti 2' },
+      { id: 703, src: '/hot offers6/3.jpg', title: 'Embroidery Alyacut Kurti 3' },
+    ],
+    'Cord Set': [
+      { id: 801, src: '/hot offers7/1.jpg', title: 'Cord Set 1' },
+      { id: 802, src: '/hot offers7/2.jpg', title: 'Cord Set 2' },
+      { id: 803, src: '/hot offers7/3.jpg', title: 'Cord Set 3' },
+    ],
+    'Chickankari Cotton Rayon': [
+      { id: 901, src: '/hot offers8/1.jpg', title: 'Chickankari Cotton Rayon 1' },
+      { id: 902, src: '/hot offers8/2.jpg', title: 'Chickankari Cotton Rayon 2' },
+      { id: 903, src: '/hot offers8/3.jpg', title: 'Chickankari Cotton Rayon 3' },
     ]
   };
 

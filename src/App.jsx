@@ -7,7 +7,6 @@ import HotOffers from './components/HotOffers';
 import WhyShopWithUs from './components/WhyShopWithUs';
 import Testimonials from './components/Testimonials';
 import InstagramFeed from './components/Instagram';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -23,7 +22,6 @@ function App() {
         <WhyShopWithUs />
         <Testimonials />
         <InstagramFeed />
-        <Contact />
       </main>
       <Footer />
 
