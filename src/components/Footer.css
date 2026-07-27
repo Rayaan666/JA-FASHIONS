@@ -1,12 +1,12 @@
 .footer-editorial {
   background-color: var(--color-bg);
-  padding: 48px 0 40px;
+  padding: 24px 0 30px;
   border-top: 1px solid var(--color-border);
 }
 
 .footer-giant {
   text-align: center;
-  margin-bottom: 42px;
+  margin-bottom: 16px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(50px, 12vw, 180px);
   margin-bottom: 52px;
-  padding: 38px 8vw 52px;
+  padding: 24px 8vw 40px;
   border-bottom: 1px solid var(--color-border);
   border-top: 1px solid var(--color-border);
 }
@@ -114,17 +114,17 @@
 
 @media (max-width: 768px) {
   .footer-editorial {
-    padding-top: 36px;
+    padding-top: 16px;
   }
 
   .footer-giant {
-    margin-bottom: 34px;
+    margin-bottom: 12px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 38px;
-    padding: 34px 0 42px;
+    padding: 20px 0 30px;
   }
   
   .footer-bottom {
