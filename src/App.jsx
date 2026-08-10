@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeaturedCollections from './components/FeaturedCollections';
 import About from './components/About';
+import Founder from './components/Founder';
 import HotOffers from './components/HotOffers';
 import WhyShopWithUs from './components/WhyShopWithUs';
 import Testimonials from './components/Testimonials';
@@ -17,6 +18,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Founder />
         <FeaturedCollections />
         <HotOffers />
         <WhyShopWithUs />

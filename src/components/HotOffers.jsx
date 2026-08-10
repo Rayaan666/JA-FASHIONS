@@ -9,10 +9,10 @@ const HotOffers = () => {
   const tabs = [
     'Chikankari Cotton Short Tops',
     'Heavy Embroidery 3 Piece Set',
+    '3piece/2 piece set',
     'Short Tops',
     'Fancy Gown',
     'Offer Kurtis',
-    'Short Top',
     'Embroidery Alyacut Kurtis',
     'Cord Set',
     'Chickankari Cotton Rayon'
@@ -21,10 +21,10 @@ const HotOffers = () => {
   const driveLinks = {
     'Chikankari Cotton Short Tops': 'https://drive.google.com/drive/folders/1VjTkh2cPiQiv1aLzDhk1C5xRI_dfrrGb',
     'Heavy Embroidery 3 Piece Set': 'https://drive.google.com/drive/folders/1VS-gOJJP4owgeiOuKlaR3UWr2sWnOLZl',
+    '3piece/2 piece set': 'https://drive.google.com/drive/folders/1XX4t6OzEUB_yEaVvscpCB40VEAcLfvNf',
     'Short Tops': 'https://drive.google.com/file/d/1BQ8a-Ed9d3nUUYash7V386HPvGrI2mAB/view',
     'Fancy Gown': 'https://drive.google.com/drive/folders/1vB06g95tGxB3-9l8pJXDucpZLxi567Rp',
     'Offer Kurtis': 'https://drive.google.com/drive/folders/11v9z-Fjyj2FBHFDuwp9m80tjIBmFGosL',
-    'Short Top': 'https://drive.google.com/drive/folders/1ZTjfPWBAXZTgkHkamK0reFkd3o9caJ5s',
     'Embroidery Alyacut Kurtis': 'https://drive.google.com/drive/folders/1-7ku4EOXYpO3sI4j2IrSIEf85eY2-h1m',
     'Cord Set': 'https://drive.google.com/drive/folders/1XixA5ykw61oUGvT6eBj98xcqwRTRv4iA',
     'Chickankari Cotton Rayon': 'https://drive.google.com/drive/folders/1418vW31r3cYlpWh_36ZhsfR2ORefM7dJ'
@@ -41,10 +41,18 @@ const HotOffers = () => {
       { id: 202, src: '/hot offers1/2.jpg', title: 'Embroidery Set 2' },
       { id: 203, src: '/hot offers1/3.jpg', title: 'Embroidery Set 3' },
     ],
+    '3piece/2 piece set': [
+      { id: 1001, src: 'https://res.cloudinary.com/r1f4rica/image/upload/IMG-20240104-WA0143', title: '3piece/2 piece set 1' },
+      { id: 1002, src: 'https://res.cloudinary.com/r1f4rica/image/upload/IMG-20230329-WA0018', title: '3piece/2 piece set 2' },
+      { id: 1003, src: 'https://res.cloudinary.com/r1f4rica/image/upload/1784036633358', title: '3piece/2 piece set 3' },
+    ],
     'Short Tops': [
       { id: 301, src: '/hot offers2/1.jpeg', title: 'Embroidered Short Top 1' },
       { id: 302, src: '/hot offers2/2.jpeg', title: 'Embroidered Short Top 2' },
       { id: 303, src: '/hot offers2/3.jpeg', title: 'Embroidered Short Top 3' },
+      { id: 601, src: '/hot offers5/1.jpg', title: 'Short Top 1' },
+      { id: 602, src: '/hot offers5/2.jpg', title: 'Short Top 2' },
+      { id: 603, src: '/hot offers5/3.jpg', title: 'Short Top 3' },
     ],
     'Fancy Gown': [
       { id: 401, src: '/hot offers3/1.jpg', title: 'Fancy Gown 1' },
@@ -55,11 +63,6 @@ const HotOffers = () => {
       { id: 501, src: '/hot offers4/1.jpg', title: 'Offer Kurti 1' },
       { id: 502, src: '/hot offers4/2.jpg', title: 'Offer Kurti 2' },
       { id: 503, src: '/hot offers4/3.jpg', title: 'Offer Kurti 3' },
-    ],
-    'Short Top': [
-      { id: 601, src: '/hot offers5/1.jpg', title: 'Short Top 1' },
-      { id: 602, src: '/hot offers5/2.jpg', title: 'Short Top 2' },
-      { id: 603, src: '/hot offers5/3.jpg', title: 'Short Top 3' },
     ],
     'Embroidery Alyacut Kurtis': [
       { id: 701, src: '/hot offers6/1.jpg', title: 'Embroidery Alyacut Kurti 1' },
