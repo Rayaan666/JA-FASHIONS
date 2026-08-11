@@ -75,7 +75,7 @@ const Founder = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <img src="/WhatsApp_Image_2026-08-10_at_7.53.55_PM.jpeg" alt="Angel Joe - Founder of JA Fashions" className="founder-main-img" />
+            <img src="/WhatsApp_Image_2026-08-11_at_7.37.43_AM.jpeg" alt="Angel Joe - Founder of JA Fashions" className="founder-main-img" />
             
             <motion.div 
               className="founder-floating-card"
