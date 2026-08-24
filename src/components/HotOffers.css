@@ -190,3 +190,23 @@
     justify-content: center;
   }
 }
+
+.hot-offers-gallery--single {
+  display: flex;
+  justify-content: center;
+}
+
+.hot-offers-gallery--single .offer-card {
+  max-width: 320px;
+  width: 100%;
+}
+
+.offer-img-wrapper--catalog {
+  aspect-ratio: auto;
+  height: auto;
+}
+
+.offer-img--catalog {
+  object-fit: contain;
+  height: auto;
+}

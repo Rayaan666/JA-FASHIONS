@@ -37,27 +37,23 @@ const HotOffers = () => {
       { id: 103, src: '/hot offers/3.jpg', title: 'Cotton Short Top 3' },
     ],
     'Heavy Embroidery 3 Piece Set': [
-      { id: 201, src: '/hot offers1/1.jpg', title: 'Embroidery Set 1' },
-      { id: 202, src: '/hot offers1/2.jpg', title: 'Embroidery Set 2' },
-      { id: 203, src: '/hot offers1/3.jpg', title: 'Embroidery Set 3' },
+      { id: 201, src: '/hot offers1/White_Gray_and_Black_Simple_Product_Catalog_8.png', title: 'Heavy Embroidery 3 Piece Set' },
     ],
     '3piece/2 piece set': [
-      { id: 1001, src: 'https://res.cloudinary.com/r1f4rica/image/upload/IMG-20240104-WA0143', title: '3piece/2 piece set 1' },
-      { id: 1002, src: 'https://res.cloudinary.com/r1f4rica/image/upload/IMG-20230329-WA0018', title: '3piece/2 piece set 2' },
-      { id: 1003, src: 'https://res.cloudinary.com/r1f4rica/image/upload/1784036633358', title: '3piece/2 piece set 3' },
+      { id: 1001, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_10', title: '3piece/2 piece set 1' },
+      { id: 1002, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_11', title: '3piece/2 piece set 2' },
+      { id: 1003, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_13', title: '3piece/2 piece set 3' },
+      { id: 1004, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_15', title: '3piece/2 piece set 4' },
+      { id: 1005, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_16', title: '3piece/2 piece set 5' },
+      { id: 1006, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_18', title: '3piece/2 piece set 6' },
     ],
     'Short Tops': [
-      { id: 301, src: '/hot offers2/1.jpeg', title: 'Embroidered Short Top 1' },
-      { id: 302, src: '/hot offers2/2.jpeg', title: 'Embroidered Short Top 2' },
-      { id: 303, src: '/hot offers2/3.jpeg', title: 'Embroidered Short Top 3' },
-      { id: 601, src: '/hot offers5/1.jpg', title: 'Short Top 1' },
-      { id: 602, src: '/hot offers5/2.jpg', title: 'Short Top 2' },
-      { id: 603, src: '/hot offers5/3.jpg', title: 'Short Top 3' },
+      { id: 301, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_19', title: 'Short Tops' },
     ],
     'Fancy Gown': [
-      { id: 401, src: '/hot offers3/1.jpg', title: 'Fancy Gown 1' },
-      { id: 402, src: '/hot offers3/2.jpg', title: 'Fancy Gown 2' },
-      { id: 403, src: '/hot offers3/3.jpg', title: 'Fancy Gown 3' },
+      { id: 401, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_20', title: 'Fancy Gown 1' },
+      { id: 402, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_21', title: 'Fancy Gown 2' },
+      { id: 403, src: 'https://res.cloudinary.com/r1f4rica/image/upload/White_Gray_and_Black_Simple_Product_Catalog_24', title: 'Fancy Gown 3' },
     ],
     'Offer Kurtis': [
       { id: 501, src: '/hot offers4/1.jpg', title: 'Offer Kurti 1' },
@@ -111,7 +107,10 @@ const HotOffers = () => {
           ))}
         </div>
 
-        <motion.div layout className="hot-offers-gallery">
+        <motion.div 
+          layout 
+          className={`hot-offers-gallery ${tabData[activeTab].length === 1 ? 'hot-offers-gallery--single' : ''}`}
+        >
           <AnimatePresence mode="popLayout">
             {tabData[activeTab].map((item) => (
               <motion.div
@@ -123,11 +122,11 @@ const HotOffers = () => {
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="offer-card"
               >
-                <div className={`offer-img-wrapper ${activeTab === 'Short Tops' ? 'offer-img-wrapper--portrait' : ''}`}>
+                <div className={`offer-img-wrapper ${item.src.includes('Catalog') ? 'offer-img-wrapper--catalog' : ''}`}>
                   <img
                     src={item.src}
                     alt={item.title}
-                    className={`offer-img ${activeTab === 'Short Tops' ? 'offer-img--portrait' : ''}`}
+                    className={`offer-img ${item.src.includes('Catalog') ? 'offer-img--catalog' : ''}`}
                   />
                   <div className="offer-overlay">
                     <h3 className="offer-title">{item.title}</h3>
@@ -145,10 +144,12 @@ const HotOffers = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <a href={driveLinks[activeTab]} target="_blank" rel="noopener noreferrer" className="btn-outline brand-hover drive-btn">
-            <ExternalLink size={18} strokeWidth={1.5} />
-            <span>View Full Catalog</span>
-          </a>
+          {activeTab !== 'Heavy Embroidery 3 Piece Set' && (
+            <a href={driveLinks[activeTab]} target="_blank" rel="noopener noreferrer" className="btn-outline brand-hover drive-btn">
+              <ExternalLink size={18} strokeWidth={1.5} />
+              <span>View Full Catalog</span>
+            </a>
+          )}
           <a href="https://wa.link/o1min2" target="_blank" rel="noopener noreferrer" className="btn-solid whatsapp-btn">
             <MessageCircle size={18} strokeWidth={1.5} />
             <span>Inquire on WhatsApp</span>
