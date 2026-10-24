@@ -5,7 +5,8 @@
 }
 
 .hot-offers-section.section-padding {
-  padding-top: 40px; /* Signficantly reduced space above Hot Offers */
+  padding-top: 40px; /* Significantly reduced space above Hot Offers */
+  padding-bottom: 30px; /* Reduced space below Hot Offers before Voucher section */
 }
 
 .hot-offers-header {

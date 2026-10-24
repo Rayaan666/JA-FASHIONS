@@ -91,14 +91,17 @@ const HotOffers = () => {
             Hot <span className="heading-italic">Offers.</span>
           </h2>
           <p className="hot-offers-desc">
-            Discover our handpicked portfolio of stunning offers. Limited time deals curated just for you.
+            Discover our curated deals on Indian ethnic wear, designer Chikankari kurtis, cotton tops, and festive occasion sets across the UAE.
           </p>
         </motion.div>
 
-        <div className="hot-offers-tabs">
+        <div className="hot-offers-tabs" role="tablist" aria-label="Offer categories">
           {tabs.map(tab => (
             <button 
               key={tab} 
+              role="tab"
+              aria-selected={activeTab === tab}
+              aria-label={`View ${tab} collection`}
               className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
               onClick={() => setActiveTab(tab)}
             >
@@ -125,8 +128,12 @@ const HotOffers = () => {
                 <div className={`offer-img-wrapper ${item.src.includes('Catalog') ? 'offer-img-wrapper--catalog' : ''}`}>
                   <img
                     src={item.src}
-                    alt={item.title}
+                    alt={`${item.title} - JA Fashions UAE ethnic fashion collection`}
                     className={`offer-img ${item.src.includes('Catalog') ? 'offer-img--catalog' : ''}`}
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="500"
                   />
                   <div className="offer-overlay">
                     <h3 className="offer-title">{item.title}</h3>

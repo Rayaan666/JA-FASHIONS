@@ -1,0 +1,6 @@
+# robots.txt for JA Fashions UAE (https://www.jafashions.com)
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://www.jafashions.com/sitemap.xml

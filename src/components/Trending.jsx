@@ -24,12 +24,12 @@ const Trending = () => {
           >
             <div className="row-num">01</div>
             <div className="row-img-wrap">
-              <img src={trend1} alt="Look 1" />
+              <img src={trend1} alt="Midnight Resonance - JA Fashions UAE evening designer collection" loading="lazy" decoding="async" width="400" height="500" />
             </div>
             <div className="row-content">
               <h3>Midnight <br/> Resonance</h3>
               <p>Deep oceanic hues paired with architectural silhouettes. A study in evening drama.</p>
-              <a href="#" className="link-hover">View Look</a>
+              <a href="#hot-offers" className="link-hover">View Look</a>
             </div>
           </motion.div>
 
@@ -44,7 +44,7 @@ const Trending = () => {
           >
             <div className="row-num">02</div>
             <div className="row-img-wrap">
-              <img src={trend2} alt="Look 2" />
+              <img src={trend2} alt="Blush Minimalism - JA Fashions UAE Chikankari collection" loading="lazy" decoding="async" width="400" height="500" />
             </div>
             <div className="row-content">
               <h3>Blush <br/> Minimalism</h3>

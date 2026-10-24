@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ArrowLeft, ArrowRight as ArrowRightIcon } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 import './FeaturedCollections.css';
-import kurtisImg from '../assets/kurtis_collection_1783242709565.png';
 
 const FeaturedCollections = () => {
   const collections = [
@@ -110,7 +109,7 @@ const FeaturedCollections = () => {
               transition={{ duration: 1, delay: 0.5 }}
             >
               <span>Explore All</span>
-              <ArrowRightIcon size={16} strokeWidth={1.5} />
+              <ArrowRight size={16} strokeWidth={1.5} />
             </motion.a>
           </div>
 
@@ -138,17 +137,21 @@ const FeaturedCollections = () => {
                   >
                     <img
                       src={collections[current].img}
-                      alt={collections[current].title}
+                      alt={`${collections[current].title} - JA Fashions UAE Collection`}
                       className="slideshow-img"
+                      loading="lazy"
+                      decoding="async"
+                      width="600"
+                      height="750"
                     />
                     <div className="slideshow-overlay"></div>
                   </motion.a>
                 </AnimatePresence>
 
-                <button className="slideshow-arrow slideshow-arrow--prev" onClick={prev} aria-label="Previous">
+                <button className="slideshow-arrow slideshow-arrow--prev" onClick={prev} aria-label="Previous Collection Slide">
                   <ArrowLeft size={18} strokeWidth={1.5} />
                 </button>
-                <button className="slideshow-arrow slideshow-arrow--next" onClick={next} aria-label="Next">
+                <button className="slideshow-arrow slideshow-arrow--next" onClick={next} aria-label="Next Collection Slide">
                   <ArrowRight size={18} strokeWidth={1.5} />
                 </button>
               </div>

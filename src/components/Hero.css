@@ -89,6 +89,12 @@
   white-space: nowrap;
 }
 
+.marquee-separator {
+  opacity: 0.6;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-33.333%); }

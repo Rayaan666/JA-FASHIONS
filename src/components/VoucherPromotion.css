@@ -1,0 +1,588 @@
+/* ─── JA Fashions Promotional Voucher Section ───────────────────── */
+.voucher-promo-section {
+  position: relative;
+  background: radial-gradient(circle at 15% 50%, rgba(233, 30, 143, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 85% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 60%),
+              #060606;
+  padding: 40px 0 80px;
+  border-top: 1px solid rgba(233, 30, 143, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+/* Subtle background luxury glow */
+.voucher-promo-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(233, 30, 143, 0.12), transparent 70%);
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+/* ─── Grid Composition ────────────────────────────────────────── */
+.voucher-promo-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 6vw;
+  align-items: center;
+}
+
+/* ─── Left Column: Digital Voucher Card ───────────────────────── */
+.voucher-visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+
+.voucher-card-container {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  transform: rotate(-2deg);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.voucher-card-container:hover {
+  transform: rotate(0deg) translateY(-8px);
+}
+
+/* Layered Card Silhouette Behind */
+.voucher-card-backdrop {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #181818, #0a0a0a);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  transform: translate(14px, 14px) rotate(3deg);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.voucher-card-container:hover .voucher-card-backdrop {
+  transform: translate(18px, 18px) rotate(4deg);
+  border-color: rgba(212, 175, 55, 0.55);
+}
+
+/* Main Digital Voucher */
+.digital-voucher-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0d0d0d;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 
+    0 25px 60px -10px rgba(0, 0, 0, 0.85),
+    0 12px 28px -5px rgba(233, 30, 143, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.voucher-card-container:hover .digital-voucher-card {
+  border-color: rgba(212, 175, 55, 0.75);
+  box-shadow: 
+    0 35px 80px -10px rgba(0, 0, 0, 0.95),
+    0 18px 45px -5px rgba(233, 30, 143, 0.38),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Upper Section: Hot Pink */
+.voucher-upper {
+  position: relative;
+  background: linear-gradient(135deg, #FF1493 0%, #E91E8F 55%, #C2185B 100%);
+  padding: 26px 28px 22px;
+  overflow: hidden;
+}
+
+/* Subtle texture on hot pink */
+.voucher-upper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.22), transparent 60%);
+  pointer-events: none;
+}
+
+/* Brand Bar */
+.voucher-header-bar {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.voucher-brand-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-logo-text {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.brand-badge-uae {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #FFE082;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 224, 130, 0.4);
+}
+
+.voucher-pill-tag {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 3px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* Gold Balloons Motif */
+.voucher-balloons-motif {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  z-index: 2;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+  opacity: 0.92;
+  transition: transform 0.5s ease;
+}
+
+.voucher-card-container:hover .voucher-balloons-motif {
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* Discount Hero */
+.voucher-discount-center {
+  position: relative;
+  z-index: 3;
+  margin-top: 6px;
+}
+
+.voucher-discount-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(3.2rem, 5.5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 0.95;
+  color: #ffffff;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.voucher-discount-word {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-style: italic;
+  letter-spacing: 5px;
+  color: #FFF0F5;
+  margin-top: 4px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Gold Diagonal Detailing Band */
+.voucher-gold-band {
+  position: relative;
+  height: 8px;
+  background: linear-gradient(
+    90deg,
+    #8C6212 0%,
+    #D4AF37 25%,
+    #FFF6B5 50%,
+    #D4AF37 75%,
+    #8C6212 100%
+  );
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+  overflow: hidden;
+}
+
+.gold-shimmer-stripe {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: gold-shimmer 3.5s infinite linear;
+}
+
+@keyframes gold-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Lower Section: Black */
+.voucher-lower {
+  background: #0d0d0d;
+  padding: 22px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.voucher-code-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.code-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.5);
+}
+
+.code-pill {
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px dashed rgba(212, 175, 55, 0.6);
+  padding: 6px 16px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: inset 0 0 8px rgba(212, 175, 55, 0.1);
+}
+
+.code-text {
+  font-family: var(--font-ui);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #FFDF73;
+}
+
+.voucher-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.55);
+}
+
+.meta-dot {
+  color: #D4AF37;
+  font-size: 0.5rem;
+}
+
+/* ─── Right Column: Promotional Copy & CTAs ───────────────────── */
+.voucher-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1. Eyebrow & Title */
+.voucher-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-pink);
+  margin-bottom: 16px;
+}
+
+.voucher-eyebrow .eyebrow-line {
+  width: 36px;
+  height: 1px;
+  background-color: var(--color-pink);
+}
+
+.voucher-title {
+  font-size: clamp(2.6rem, 4.5vw, 4.2rem);
+  line-height: 1.08;
+  color: #F5F5F5;
+  letter-spacing: -1.5px;
+  margin-bottom: 22px;
+}
+
+.voucher-title .heading-italic {
+  font-style: italic;
+  color: var(--color-pink);
+}
+
+/* 2. Highlight Badge */
+.voucher-highlight-wrap {
+  margin-bottom: 18px;
+}
+
+.voucher-highlight-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(233, 30, 143, 0.1);
+  border: 1px solid rgba(233, 30, 143, 0.35);
+  border-radius: 40px;
+  padding: 8px 20px;
+}
+
+.highlight-icon {
+  color: var(--color-pink);
+}
+
+.highlight-value {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-pink);
+  letter-spacing: 0.5px;
+}
+
+.highlight-sub {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(245, 245, 245, 0.75);
+  padding-left: 8px;
+  border-left: 1px solid rgba(233, 30, 143, 0.3);
+}
+
+/* 3. Description */
+.voucher-description {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: rgba(245, 245, 245, 0.7);
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+/* 4. Voucher Code Box */
+.voucher-action-box {
+  margin-bottom: 24px;
+}
+
+.voucher-code-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background: #111111;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 8px;
+  padding: 10px 14px 10px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.chip-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.chip-label {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.45);
+}
+
+.chip-code {
+  font-family: var(--font-ui);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #FFDF73;
+}
+
+.btn-voucher-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(233, 30, 143, 0.15);
+  border: 1px solid rgba(233, 30, 143, 0.45);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-voucher-copy:hover {
+  background: var(--color-pink);
+  border-color: var(--color-pink);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(233, 30, 143, 0.4);
+}
+
+.btn-voucher-copy.is-copied {
+  background: #10B981;
+  border-color: #10B981;
+  color: #ffffff;
+}
+
+/* 5. Primary WhatsApp CTA */
+.voucher-cta-wrap {
+  margin-bottom: 18px;
+}
+
+.btn-voucher-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--color-pink);
+  color: #ffffff;
+  padding: 18px 38px;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(233, 30, 143, 0.35);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.btn-voucher-whatsapp:hover {
+  background: #d8167f;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(233, 30, 143, 0.55);
+  color: #ffffff;
+}
+
+/* 6. Terms */
+.voucher-terms {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  color: rgba(245, 245, 245, 0.45);
+}
+
+/* ─── Tablet & Responsive Breakpoints ─────────────────────────── */
+@media (max-width: 1024px) {
+  .voucher-promo-section {
+    padding: 35px 0 70px;
+  }
+  .voucher-promo-grid {
+    gap: 4vw;
+  }
+  .voucher-card-container {
+    max-width: 400px;
+  }
+}
+
+/* ─── Mobile Ordering Specification ───────────────────────────── */
+/* Required Mobile Order:
+   1. Heading
+   2. 20% OFF
+   3. Description
+   4. Digital voucher
+   5. Coupon code
+   6. CTA
+   7. Terms
+*/
+@media (max-width: 899px) {
+  .voucher-promo-section {
+    padding: 24px 0 50px;
+  }
+
+  .voucher-promo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* Unwraps content column children into direct flex items */
+  .voucher-content-col {
+    display: contents;
+  }
+
+  .voucher-heading-wrap {
+    order: 1;
+    text-align: left;
+  }
+
+  .voucher-title {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+  }
+
+  .voucher-highlight-wrap {
+    order: 2;
+  }
+
+  .voucher-description {
+    order: 3;
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .voucher-visual-col {
+    order: 4;
+    width: 100%;
+    margin: 14px 0 18px;
+  }
+
+  .voucher-card-container {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+
+  .voucher-card-backdrop {
+    transform: translate(8px, 8px) rotate(1.5deg);
+  }
+
+  .voucher-action-box {
+    order: 5;
+    width: 100%;
+  }
+
+  .voucher-code-chip {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .voucher-cta-wrap {
+    order: 6;
+    width: 100%;
+  }
+
+  .btn-voucher-whatsapp {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 0.82rem;
+  }
+
+  .voucher-terms {
+    order: 7;
+    font-size: 0.72rem;
+    text-align: center;
+  }
+}

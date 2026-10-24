@@ -78,7 +78,7 @@ const InstagramFeed = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Tag <a href="https://www.instagram.com/jafashionsuae/" target="_blank" rel="noreferrer" className="insta-handle">@jafashionsuae</a> to be featured in our style gallery.
+            Tag <a href="https://www.instagram.com/jafashionsuae/" target="_blank" rel="noopener noreferrer" className="insta-handle">@jafashionsuae</a> to be featured in our style gallery.
           </motion.p>
         </div>
 
@@ -107,8 +107,9 @@ const InstagramFeed = () => {
                     key={post.id}
                     href={post.permalink}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="instagram-custom-card"
+                    aria-label={`View Instagram post: ${post.prunedCaption ? post.prunedCaption.slice(0, 60) : 'JA Fashions UAE fashion collection'}`}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -117,9 +118,12 @@ const InstagramFeed = () => {
                     <div className="instagram-img-wrapper">
                       <img 
                         src={imageUrl} 
-                        alt={post.prunedCaption || "Instagram post by jafashionsuae"} 
+                        alt={post.prunedCaption || "JA Fashions UAE women's ethnic fashion highlight"} 
                         className="insta-post-img"
                         loading="lazy"
+                        decoding="async"
+                        width="400"
+                        height="400"
                       />
                       
                       {post.mediaType === 'VIDEO' && (
@@ -171,8 +175,9 @@ const InstagramFeed = () => {
           <a 
             href="https://www.instagram.com/jafashionsuae/" 
             target="_blank" 
-            rel="noreferrer" 
+            rel="noopener noreferrer" 
             className="btn-outline brand-hover"
+            aria-label="Visit JA Fashions UAE on Instagram"
           >
             <InstaIcon size={18} />
             <span>Visit @jafashionsuae</span>

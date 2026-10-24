@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Gem, Sparkles, MapPin } from 'lucide-react';
+import { ShieldCheck, Gem, Crown, MapPin } from 'lucide-react';
 import './About.css';
 
 const About = () => {
   const features = [
     { icon: <Gem size={20} strokeWidth={1.5} />, title: 'Uncompromising Quality', desc: 'Crafted with premium materials and flawless attention to detail.' },
     { icon: <ShieldCheck size={20} strokeWidth={1.5} />, title: 'Built on Trust', desc: 'Authentic designer pieces guaranteed, with a legacy of excellence.' },
-    { icon: <Sparkles size={20} strokeWidth={1.5} />, title: 'Timeless Elegance', desc: 'Curated collections that transcend seasonal trends.' },
+    { icon: <Crown size={20} strokeWidth={1.5} />, title: 'Timeless Elegance', desc: 'Curated collections that transcend seasonal trends.' },
     { icon: <MapPin size={20} strokeWidth={1.5} />, title: 'UAE-Based Service', desc: 'Rooted in Dubai, delivering bespoke luxury experiences globally.' }
   ];
 
@@ -24,8 +24,15 @@ const About = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="about-img-glow"></div>
-            <img src="/story.png" alt="JA Fashions Our Story" className="about-main-img" />
+            <img
+              src="/story.png"
+              alt="JA Fashions boutique heritage and artisanal fashion story in Dubai UAE"
+              className="about-main-img"
+              loading="lazy"
+              decoding="async"
+              width="600"
+              height="700"
+            />
             
             <motion.div 
               className="about-experience-badge"

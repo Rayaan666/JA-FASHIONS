@@ -1,5 +1,5 @@
 import React from 'react';
-import { RefreshCcw, Scale, Truck } from 'lucide-react';
+import { RefreshCcw, Scale, Truck, ShieldCheck } from 'lucide-react';
 import './Policies.css';
 
 const PolicyBlock = ({ id, number, title, icon: Icon, children }) => (
@@ -34,7 +34,7 @@ const Policies = () => {
             <h2>Our <span className="heading-italic">Policies</span></h2>
           </div>
           <p className="policies-intro">
-            Clear terms for shopping, returns, and delivery with JA Fashions.
+            Clear terms for shopping, returns, delivery, and data privacy with JA Fashions.
             These policies are effective from <strong>July 2026</strong>.
           </p>
         </div>
@@ -43,6 +43,7 @@ const Policies = () => {
           <a href="#terms">Terms &amp; Conditions</a>
           <a href="#returns">Refunds &amp; Returns</a>
           <a href="#shipping">Shipping</a>
+          <a href="#privacy">Privacy Policy</a>
         </nav>
 
         <div className="policy-list">
@@ -170,6 +171,39 @@ const Policies = () => {
               <p>
                 If a package is lost or damaged during transit, JA Fashions will assist
                 with courier claims and provide support.
+              </p>
+            </PolicyItem>
+          </PolicyBlock>
+
+          <PolicyBlock id="privacy" number="04" title="Privacy & Data Protection" icon={ShieldCheck}>
+            <PolicyItem title="Information We Collect">
+              <p>
+                We collect personal information that you provide when submitting an enquiry, placing an order,
+                or contacting us on WhatsApp. This includes your name, phone number, email address, and shipping address.
+              </p>
+            </PolicyItem>
+            <PolicyItem title="How We Use Your Data">
+              <p>
+                Your data is strictly used to fulfill customer orders, deliver packages across the UAE,
+                provide styling assistance, and respond to your direct queries. We never sell or rent customer data.
+              </p>
+            </PolicyItem>
+            <PolicyItem title="WhatsApp &amp; Social Inquiries">
+              <p>
+                Customer orders and concierge communications are facilitated through WhatsApp and Instagram.
+                These interactions are governed by their respective privacy terms alongside our boutique care standards.
+              </p>
+            </PolicyItem>
+            <PolicyItem title="Third-Party Delivery Partners">
+              <p>
+                To deliver orders in Dubai and across the UAE, your delivery details (name, phone, address)
+                are shared solely with our authorized courier partners for courier fulfillment.
+              </p>
+            </PolicyItem>
+            <PolicyItem title="Data Retention &amp; Rights">
+              <p>
+                You may request access to, correction of, or deletion of your personal records at any time
+                by contacting us at <strong>jafashions2014@gmail.com</strong> or via WhatsApp at <strong>+971 52 839 4207</strong>.
               </p>
             </PolicyItem>
           </PolicyBlock>

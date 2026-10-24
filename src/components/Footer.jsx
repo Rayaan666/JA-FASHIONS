@@ -7,8 +7,16 @@ const Footer = () => {
       <div className="container">
         
         <div className="footer-giant">
-          <a href="#" aria-label="JA Fashions home">
-            <img src="/logo.png" alt="JA Fashions" className="footer-logo-img" />
+          <a href="/" aria-label="JA Fashions UAE Home">
+            <img 
+              src="/logo.png" 
+              alt="JA Fashions UAE Luxury Boutique" 
+              className="footer-logo-img" 
+              width="180"
+              height="54"
+              loading="lazy"
+              decoding="async"
+            />
           </a>
         </div>
 
@@ -73,6 +81,7 @@ const Footer = () => {
             <a href="/terms.html#terms" target="_blank" rel="noopener noreferrer" className="link-hover">Terms</a>
             <a href="/terms.html#returns" target="_blank" rel="noopener noreferrer" className="link-hover">Returns</a>
             <a href="/terms.html#shipping" target="_blank" rel="noopener noreferrer" className="link-hover">Shipping</a>
+            <a href="/terms.html#privacy" target="_blank" rel="noopener noreferrer" className="link-hover">Privacy Policy</a>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, ChevronDown, Sparkles } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { ArrowRight, Star, ChevronDown } from 'lucide-react';
 import './Hero.css';
 import heroImg from '../assets/luxury_model_hero_1783242699783.png';
 
@@ -85,55 +85,6 @@ const Hero = () => {
 
   return (
     <>
-      {/* ── JSON-LD Structured Data for SEO ── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ClothingStore",
-            "@id": "https://www.jafashions.com/#clothing-store",
-            "name": "JA Fashions",
-            "description": "JA Fashions is a Dubai luxury fashion boutique for women, offering designer wear, party wear gowns, kurtis, plus-size styles, jewellery, and curated occasion outfits across the UAE.",
-            "url": "https://www.jafashions.com",
-            "image": "https://www.jafashions.com/logo.png",
-            "logo": "https://www.jafashions.com/logo.png",
-            "telephone": "+971528394207",
-            "email": "jafashions2014@gmail.com",
-            "priceRange": "$$$",
-            "areaServed": {
-              "@type": "Country",
-              "name": "United Arab Emirates"
-            },
-            "sameAs": [
-              "https://www.instagram.com/jafashionsuae/",
-              "https://www.facebook.com/jafashions"
-            ],
-            "makesOffer": {
-              "@type": "OfferCatalog",
-              "name": "JA Fashions Women's Designer Collections",
-              "itemListElement": [
-                {
-                  "@type": "OfferCatalog",
-                  "name": "Luxury Designer Wear",
-                  "description": "Premium women's designer outfits for parties, celebrations, and special occasions"
-                },
-                {
-                  "@type": "OfferCatalog",
-                  "name": "Kurtis and Ethnic Fashion",
-                  "description": "Elegant kurtis and modern ethnic styles curated for women in the UAE"
-                },
-                {
-                  "@type": "OfferCatalog",
-                  "name": "Plus-Size Fashion",
-                  "description": "Inclusive plus-size fashion options with refined tailoring and premium finishes"
-                }
-              ]
-            }
-          })
-        }}
-      />
-
       <section
         ref={sectionRef}
         className="hero-section"
@@ -165,7 +116,7 @@ const Hero = () => {
           <div className="hero-marquee-track">
             {[...marqueeWords, ...marqueeWords, ...marqueeWords].map((w, i) => (
               <span key={i} className="marquee-item">
-                <Sparkles size={10} />
+                <span className="marquee-separator">•</span>
                 {w}
               </span>
             ))}
@@ -179,7 +130,7 @@ const Hero = () => {
             style={{ y: textY }}
           >
             {/* ── Left Text Column ── */}
-            <article className="hero-text-col" itemScope itemType="https://schema.org/ClothingStore">
+            <article className="hero-text-col">
               {/* Eyebrow badge */}
               <motion.div
                 className="hero-eyebrow"
@@ -188,7 +139,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               >
                 <span className="eyebrow-dot" />
-                <span itemProp="name">JA Fashions</span>
+                <span>JA Fashions</span>
                 <span className="eyebrow-divider">·</span>
                 <span>Dubai Luxury Fashion Boutique</span>
               </motion.div>
@@ -209,7 +160,6 @@ const Hero = () => {
               {/* SEO-rich description */}
               <motion.p
                 className="hero-desc"
-                itemProp="description"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.9 }}
@@ -219,24 +169,19 @@ const Hero = () => {
                 and curated occasion outfits for modern style.
               </motion.p>
 
-              {/* Star rating (SEO boost with AggregateRating schema) */}
+              {/* Star rating social proof */}
               <motion.div
                 className="hero-rating"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.1 }}
-                itemProp="aggregateRating"
-                itemScope
-                itemType="https://schema.org/AggregateRating"
               >
-                <div className="stars" aria-label="Rated 4.9 out of 5 stars">
+                <div className="stars" aria-label="Customer satisfaction rating 4.9 out of 5 stars">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={13} fill="#E91E8F" stroke="none" />
                   ))}
                 </div>
                 <span className="rating-text">
-                  <meta itemProp="ratingValue" content="4.9" />
-                  <meta itemProp="reviewCount" content="2400" />
                   <strong>4.9</strong> from 2,400+ reviews
                 </span>
               </motion.div>
@@ -293,10 +238,12 @@ const Hero = () => {
                 <div className="img-glow" />
                 <img
                   src={heroImg}
-                  alt="Model wearing JA Fashions luxury designer outfit for women"
+                  alt="Model wearing JA Fashions luxury designer outfit for women in Dubai"
                   className="hero-img-main"
                   loading="eager"
                   decoding="async"
+                  width="600"
+                  height="750"
                 />
                 {/* Floating card */}
                 <motion.div

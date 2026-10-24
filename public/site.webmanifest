@@ -1,6 +1,7 @@
 {
-  "name": "JA Fashions Dubai",
+  "name": "JA Fashions UAE",
   "short_name": "JA Fashions",
+  "description": "Women's luxury designer fashion, kurtis, Indian ethnic wear, Chikankari tops and jewellery in the UAE.",
   "icons": [
     {
       "src": "/logo.png",
@@ -16,5 +17,6 @@
   "theme_color": "#E91E8F",
   "background_color": "#080808",
   "display": "standalone",
-  "start_url": "/"
+  "start_url": "/",
+  "scope": "/"
 }

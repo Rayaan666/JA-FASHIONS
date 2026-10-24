@@ -1,0 +1,282 @@
+/* ─── Floating 20% OFF Promotional Tab & Card ──────────────────── */
+.floating-voucher-wrapper {
+  position: fixed;
+  bottom: 98px;
+  right: 28px;
+  z-index: 9998; /* Stacks right above floating WhatsApp without interfering */
+  pointer-events: auto;
+}
+
+/* ─── Floating Tab Button ─────────────────────────────────────── */
+.floating-voucher-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-pink);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 215, 0, 0.45);
+  box-shadow: 
+    0 6px 20px rgba(233, 30, 143, 0.45),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
+  outline: none;
+}
+
+.floating-voucher-tab:hover {
+  transform: translateY(-3px) scale(1.04);
+  background: #ff1493;
+  box-shadow: 
+    0 10px 28px rgba(233, 30, 143, 0.6),
+    0 4px 12px rgba(212, 175, 55, 0.35);
+}
+
+.floating-voucher-tab.active-tab {
+  border-color: rgba(255, 215, 0, 0.85);
+  box-shadow: 0 0 0 3px rgba(233, 30, 143, 0.3), 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.tab-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF2B2;
+}
+
+.tab-label {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ─── Floating Voucher Card ───────────────────────────────────── */
+.floating-voucher-card {
+  position: absolute;
+  bottom: 56px;
+  right: 0;
+  width: 320px;
+  background: #0d0d0d;
+  border-radius: 16px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.85),
+    0 8px 25px rgba(233, 30, 143, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  z-index: 10000;
+}
+
+/* Card Header */
+.card-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px 10px;
+  background: #141414;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: var(--color-pink);
+  text-transform: uppercase;
+}
+
+.card-close-btn {
+  background: transparent;
+  border: none;
+  color: rgba(245, 245, 245, 0.5);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.card-close-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Highlight Banner */
+.card-highlight-area {
+  background: linear-gradient(135deg, #FF1493 0%, #E91E8F 55%, #C2185B 100%);
+  padding: 16px 18px;
+  text-align: center;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, #8C6212, #D4AF37, #FFF6B5, #D4AF37, #8C6212) 1;
+}
+
+.card-discount-val {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-discount-sub {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFF0F5;
+  margin-top: 4px;
+}
+
+/* Card Body */
+.card-body {
+  padding: 18px;
+  text-align: center;
+}
+
+.card-code-lead {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.5);
+  margin-bottom: 8px;
+}
+
+.card-code-badge {
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px dashed rgba(212, 175, 55, 0.65);
+  padding: 8px 16px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.card-code-text {
+  font-family: var(--font-ui);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #FFDF73;
+}
+
+.card-terms-list {
+  margin-bottom: 18px;
+}
+
+.card-term {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #F5F5F5;
+  margin-bottom: 2px;
+}
+
+.card-term-muted {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  color: rgba(245, 245, 245, 0.45);
+}
+
+/* Card Action Buttons */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-btn-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(233, 30, 143, 0.12);
+  border: 1px solid rgba(233, 30, 143, 0.4);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.card-btn-copy:hover {
+  background: var(--color-pink);
+  border-color: var(--color-pink);
+}
+
+.card-btn-copy.is-copied {
+  background: #10B981;
+  border-color: #10B981;
+  color: #ffffff;
+}
+
+.card-btn-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--color-pink);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(233, 30, 143, 0.35);
+  transition: all 0.25s ease;
+}
+
+.card-btn-whatsapp:hover {
+  background: #d8167f;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(233, 30, 143, 0.5);
+  color: #ffffff;
+}
+
+/* ─── Mobile Responsiveness ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .floating-voucher-wrapper {
+    bottom: 94px;
+    right: 20px;
+  }
+
+  .floating-voucher-tab {
+    padding: 8px 14px;
+  }
+
+  .tab-label {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+
+  .floating-voucher-card {
+    right: 0;
+    width: 290px;
+    max-width: calc(100vw - 40px);
+  }
+
+  .card-discount-val {
+    font-size: 2rem;
+  }
+}

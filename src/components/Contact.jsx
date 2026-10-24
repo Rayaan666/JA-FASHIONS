@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MessageCircle, Instagram, Send } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Instagram, Send, CheckCircle2 } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) return;
+    setSubmitted(true);
+    setFormData({ name: '', email: '', phone: '', message: '' });
+    setTimeout(() => setSubmitted(false), 6000);
+  };
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
   return (
     <section className="contact-section" id="contact">
       <div className="container">
@@ -65,11 +80,11 @@ const Contact = () => {
             </ul>
 
             <div className="contact-actions">
-              <a href="https://wa.link/o1min2" target="_blank" rel="noreferrer" className="btn-whatsapp">
+              <a href="https://wa.link/o1min2" target="_blank" rel="noopener noreferrer" className="btn-whatsapp" aria-label="Order via WhatsApp">
                 <MessageCircle size={20} />
                 WhatsApp Order
               </a>
-              <a href="https://www.instagram.com/jafashionsuae/" target="_blank" rel="noreferrer" className="btn-instagram">
+              <a href="https://www.instagram.com/jafashionsuae/" target="_blank" rel="noopener noreferrer" className="btn-instagram" aria-label="Follow JA Fashions on Instagram">
                 <Instagram size={20} />
                 Follow Us
               </a>
@@ -86,34 +101,77 @@ const Contact = () => {
           >
             <div className="form-card">
               <h3 className="contact-subtitle">Quick Enquiry</h3>
-              <form className="enquiry-form" onSubmit={(e) => e.preventDefault()}>
-                
-                <div className="form-group">
-                  <label htmlFor="name">Full Name</label>
-                  <input type="text" id="name" placeholder="Enter your name" required />
+              {submitted ? (
+                <div className="form-success-banner" role="status" aria-live="polite" style={{ padding: '24px 16px', textAlign: 'center', background: 'rgba(233, 30, 143, 0.1)', border: '1px solid rgba(233, 30, 143, 0.3)', borderRadius: '6px' }}>
+                  <CheckCircle2 size={32} style={{ color: '#E91E8F', margin: '0 auto 10px', display: 'block' }} />
+                  <p style={{ color: '#ffffff', fontWeight: 600, marginBottom: '6px' }}>Thank you for your message!</p>
+                  <p style={{ color: 'rgba(245, 245, 245, 0.7)', fontSize: '0.88rem' }}>Our Dubai concierge team will contact you shortly.</p>
                 </div>
-                
-                <div className="form-group-row">
+              ) : (
+                <form className="enquiry-form" onSubmit={handleSubmit} noValidate={false}>
                   <div className="form-group">
-                    <label htmlFor="email">Email Address</label>
-                    <input type="email" id="email" placeholder="Enter your email" required />
+                    <label htmlFor="name">Full Name</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      placeholder="Enter your name" 
+                      value={formData.name}
+                      onChange={handleChange}
+                      maxLength={100}
+                      autoComplete="name"
+                      required 
+                    />
                   </div>
+                  
+                  <div className="form-group-row">
+                    <div className="form-group">
+                      <label htmlFor="email">Email Address</label>
+                      <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Enter your email" 
+                        value={formData.email}
+                        onChange={handleChange}
+                        maxLength={120}
+                        autoComplete="email"
+                        required 
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="phone">Phone Number</label>
+                      <input 
+                        type="tel" 
+                        id="phone" 
+                        placeholder="+971 -- --- ----" 
+                        value={formData.phone}
+                        onChange={handleChange}
+                        pattern="[+]?[0-9\s\-\(\)]{7,20}"
+                        maxLength={25}
+                        autoComplete="tel"
+                        required 
+                      />
+                    </div>
+                  </div>
+
                   <div className="form-group">
-                    <label htmlFor="phone">Phone Number</label>
-                    <input type="tel" id="phone" placeholder="+971 -- --- ----" required />
+                    <label htmlFor="message">Your Message or Order Details</label>
+                    <textarea 
+                      id="message" 
+                      rows="4" 
+                      placeholder="How can we help you?" 
+                      value={formData.message}
+                      onChange={handleChange}
+                      maxLength={1000}
+                      required
+                    ></textarea>
                   </div>
-                </div>
 
-                <div className="form-group">
-                  <label htmlFor="message">Your Message or Order Details</label>
-                  <textarea id="message" rows="4" placeholder="How can we help you?" required></textarea>
-                </div>
-
-                <button type="submit" className="btn-outline brand-hover btn-submit">
-                  <span>Send Enquiry</span>
-                  <Send size={16} strokeWidth={1.5} />
-                </button>
-              </form>
+                  <button type="submit" className="btn-outline brand-hover btn-submit" aria-label="Submit quick enquiry">
+                    <span>Send Enquiry</span>
+                    <Send size={16} strokeWidth={1.5} />
+                  </button>
+                </form>
+              )}
             </div>
           </motion.div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Truck, Sparkles, Tag, Shirt, Headset } from 'lucide-react';
+import { Truck, Crown, Tag, Shirt, Headset } from 'lucide-react';
 import './WhyShopWithUs.css';
 
 const WhyShopWithUs = () => {
@@ -11,7 +11,7 @@ const WhyShopWithUs = () => {
       desc: "Fast and reliable shipping across all emirates, bringing luxury straight to your doorstep."
     },
     {
-      icon: <Sparkles size={32} strokeWidth={1} />,
+      icon: <Crown size={32} strokeWidth={1} />,
       title: "Trendy & Timeless",
       desc: "Curated collections that perfectly balance contemporary trends with enduring elegance."
     },

@@ -8,8 +8,14 @@ const TermsPage = () => {
     <div className="terms-page">
       <header className="terms-topbar">
         <div className="container terms-topbar-inner">
-          <a href="/" className="terms-brand" aria-label="JA Fashions home">
-            <img src="/logo.png" alt="JA Fashions" />
+          <a href="/" className="terms-brand" aria-label="JA Fashions UAE home">
+            <img 
+              src="/logo.png" 
+              alt="JA Fashions UAE" 
+              width="140"
+              height="42"
+              decoding="async"
+            />
           </a>
 
           <a href="/" className="terms-back-link">
@@ -26,7 +32,15 @@ const TermsPage = () => {
       <footer className="terms-footer">
         <div className="container terms-footer-inner">
           <div>
-            <img src="/logo.png" alt="JA Fashions" className="terms-footer-logo" />
+            <img 
+              src="/logo.png" 
+              alt="JA Fashions UAE" 
+              className="terms-footer-logo" 
+              width="160"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
             <p>Questions about an order or one of our policies? We’re here to help.</p>
           </div>
 
