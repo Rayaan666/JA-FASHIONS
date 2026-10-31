@@ -119,25 +119,28 @@
 .founder-visual-col {
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .founder-img-main-wrapper {
   position: relative;
   border-radius: 20px;
   overflow: visible;
-  margin-top: 60px;
+  width: 100%;
+  max-width: 480px;
 }
 
 .founder-main-img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  object-position: top;
+  max-height: 80vh;
+  object-fit: contain;
   border-radius: 20px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 2;
+  display: block;
 }
 
 .founder-img-backdrop {

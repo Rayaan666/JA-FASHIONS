@@ -56,11 +56,11 @@ const Navbar = () => {
           <div className="nav-logo">
             <a href="/" aria-label="JA Fashions UAE Home">
               <img 
-                src="/logo.png" 
+                src="/logo-cropped.png" 
                 alt="JA Fashions UAE Luxury Boutique" 
                 className="logo-img" 
-                width="140"
-                height="42"
+                width="186"
+                height="100"
                 decoding="async"
               />
             </a>

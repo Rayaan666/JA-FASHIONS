@@ -81,8 +81,8 @@ const Founder = () => {
               className="founder-main-img"
               loading="lazy"
               decoding="async"
-              width="500"
-              height="600"
+              width="673"
+              height="1600"
             />
             
             <motion.div 
