@@ -1,9 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import FeaturedCollections from './components/FeaturedCollections';
 import About from './components/About';
-import Founder from './components/Founder';
 import HotOffers from './components/HotOffers';
 import VoucherPromotion from './components/VoucherPromotion';
 import WhyShopWithUs from './components/WhyShopWithUs';
@@ -19,10 +17,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Founder />
-        <FeaturedCollections />
         <HotOffers />
+        <About />
         <VoucherPromotion />
         <WhyShopWithUs />
         <Testimonials />

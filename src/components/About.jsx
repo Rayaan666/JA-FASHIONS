@@ -109,8 +109,12 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 1 }}
+            style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}
           >
-            <a href="#collections" className="btn-outline brand-hover">
+            <a href="/about.html" className="btn-outline brand-hover">
+              Meet The Visionary
+            </a>
+            <a href="#hot-offers" className="btn-outline brand-hover">
               Explore Our Curations
             </a>
           </motion.div>

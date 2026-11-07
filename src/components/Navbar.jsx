@@ -48,8 +48,8 @@ const Navbar = () => {
             </button>
             
             <ul className="nav-links desktop-only">
-              <li><a href="#about" className="link-hover">About</a></li>
-              <li><a href="#collections" className="link-hover">Collections</a></li>
+              <li><a href="/#hot-offers" className="link-hover">Hot Offers</a></li>
+              <li><a href="/about.html" className="link-hover">About</a></li>
             </ul>
           </div>
 
@@ -68,9 +68,8 @@ const Navbar = () => {
 
           <div className="nav-right">
             <ul className="nav-links desktop-only">
-              <li><a href="#hot-offers" className="link-hover">Hot Offers</a></li>
-              <li><a href="#promotions" className="link-hover">Vouchers</a></li>
-              <li><a href="#why-shop" className="link-hover">Why Choose</a></li>
+              <li><a href="/#promotions" className="link-hover">Vouchers</a></li>
+              <li><a href="/#why-shop" className="link-hover">Why Choose</a></li>
             </ul>
           </div>
         </div>
@@ -88,11 +87,10 @@ const Navbar = () => {
               transition={{ duration: 0.4 }}
             >
               <ul className="mobile-links-editorial">
-                <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-                <li><a href="#collections" onClick={() => setMenuOpen(false)}>Collections</a></li>
-                <li><a href="#hot-offers" onClick={() => setMenuOpen(false)}>Hot Offers</a></li>
-                <li><a href="#promotions" onClick={() => setMenuOpen(false)}>Promotional Voucher</a></li>
-                <li><a href="#why-shop" onClick={() => setMenuOpen(false)}>Why Choose</a></li>
+                <li><a href="/#hot-offers" onClick={() => setMenuOpen(false)}>Hot Offers</a></li>
+                <li><a href="/about.html" onClick={() => setMenuOpen(false)}>About &amp; Visionary</a></li>
+                <li><a href="/#promotions" onClick={() => setMenuOpen(false)}>Promotional Voucher</a></li>
+                <li><a href="/#why-shop" onClick={() => setMenuOpen(false)}>Why Choose</a></li>
               </ul>
             </motion.div>
           )}

@@ -194,7 +194,7 @@ const Hero = () => {
                 transition={{ duration: 0.9, delay: 1.3 }}
               >
                 <a
-                  href="#collections"
+                  href="#hot-offers"
                   className="btn-hero-primary"
                   aria-label="Shop women's luxury designer fashion collections at JA Fashions"
                   id="hero-shop-cta"
@@ -294,12 +294,12 @@ const Hero = () => {
 
         {/* ── Scroll Indicator ── */}
         <motion.a
-          href="#collections"
+          href="#hot-offers"
           className="hero-scroll-btn"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.2, duration: 1 }}
-          aria-label="Scroll to collections"
+          aria-label="Scroll to hot offers"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}

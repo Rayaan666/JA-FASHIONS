@@ -66,9 +66,7 @@ const HotOffers = () => {
       { id: 703, src: '/hot offers6/3.jpg', title: 'Embroidery Alyacut Kurti 3' },
     ],
     'Cord Set': [
-      { id: 801, src: '/hot offers7/1.jpg', title: 'Cord Set 1' },
-      { id: 802, src: '/hot offers7/2.jpg', title: 'Cord Set 2' },
-      { id: 803, src: '/hot offers7/3.jpg', title: 'Cord Set 3' },
+      { id: 801, src: 'https://res.cloudinary.com/r1f4rica/image/upload/Screenshot_2026-11-07_224629', title: 'Cord Set' },
     ],
     'Chickankari Cotton Rayon': [
       { id: 901, src: '/hot offers8/1.jpg', title: 'Chickankari Cotton Rayon 1' },
@@ -125,11 +123,11 @@ const HotOffers = () => {
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="offer-card"
               >
-                <div className={`offer-img-wrapper ${item.src.includes('Catalog') ? 'offer-img-wrapper--catalog' : ''}`}>
+                <div className={`offer-img-wrapper ${item.src.includes('Catalog') || item.src.includes('Screenshot') ? 'offer-img-wrapper--catalog' : ''}`}>
                   <img
                     src={item.src}
                     alt={`${item.title} - JA Fashions UAE ethnic fashion collection`}
-                    className={`offer-img ${item.src.includes('Catalog') ? 'offer-img--catalog' : ''}`}
+                    className={`offer-img ${item.src.includes('Catalog') || item.src.includes('Screenshot') ? 'offer-img--catalog' : ''}`}
                     loading="lazy"
                     decoding="async"
                     width="400"
